@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #1E2330;
+    --color-olive: #707C27;
+    --color-charcoal: #111111;
+    --color-ivory: #F5F4EF;
+  }
+
+  body {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+    font-family: var(--font-sans), sans-serif;
+    border-color: #222222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Force sharp square edges, zero rounded corners, and no drop shadows across all elements */
+  * {
+    border-radius: 0px !important;
+    box-shadow: none !important;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
