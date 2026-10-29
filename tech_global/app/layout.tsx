@@ -26,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${displayFont.variable} ${sansFont.variable} antialiased bg-[#111111] text-[#F5F4EF]`}>
+      <body 
+        className={`${displayFont.variable} ${sansFont.variable} antialiased bg-[#111111] text-[#F5F4EF]`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>
