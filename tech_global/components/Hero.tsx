@@ -1,49 +1,58 @@
 import Image from "next/image";
+import Button from "./Button";
 
 export default function Hero() {
   return (
     <>
-      <section className="relative py-16 md:py-24 px-6 border-b border-[#222222] overflow-hidden">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 font-display text-[18vw] font-black text-[#191C24] select-none pointer-events-none z-0 opacity-40 leading-none">
-          TG
-        </div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-[#707C27] text-xs font-bold tracking-widest uppercase mb-6 flex items-center gap-3">
-            <span className="w-2 h-2 bg-[#707C27] inline-block"></span>
-            <span>CIVIL CONTRACTING · MASONRY · FINISHES · REMODELLING</span>
-          </div>
+      <section className="relative py-20 md:py-28 px-6 border-b border-[#222222] overflow-hidden bg-[#111111]">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-8 items-center relative z-10">
           
-          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold leading-[0.9] mb-10 text-[#F5F4EF] uppercase">
-            WE BUILD.<br />
-            <span className="text-[#707C27]">WE FINISH.</span>
-          </h1>
-
-          <div className="grid md:grid-cols-12 gap-8 items-end">
-            <div className="md:col-span-7 border-l-2 border-[#707C27] pl-6 py-1">
-              <p className="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed font-normal">
-                Turnkey civil construction, structural wall assembly, plastering, high-durability epoxy flooring systems, commercial waterproofing, and complete property remodelling.
-              </p>
+          {/* Main Typography Column */}
+          <div className="md:col-span-8">
+            <div className="text-[#707C27] text-xs font-bold tracking-widest uppercase mb-6 flex items-center gap-3">
+              <span className="w-2 h-2 bg-[#707C27]" aria-hidden="true"></span>
+              <span>CIVIL CONTRACTING · MASONRY · FINISHES · REMODELLING</span>
             </div>
             
-            <div className="md:col-span-5 flex flex-col sm:flex-row justify-start md:justify-end gap-4">
-              <a 
-                href="#projects" 
-                className="bg-[#F5F4EF] text-[#111111] px-8 py-4 text-xs font-bold uppercase tracking-widest border border-[#F5F4EF] text-center"
-              >
-                View Selected Work
-              </a>
-              <a 
-                href="#services" 
-                className="border border-[#707C27] text-[#707C27] px-8 py-4 text-xs font-bold uppercase tracking-widest text-center hover:bg-[#707C27] hover:text-white transition-colors"
-              >
-                Our Capabilities
-              </a>
+            <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold leading-[0.88] mb-8 text-[#F5F4EF] uppercase tracking-tight">
+              WE BUILD.<br />
+              <span className="text-[#707C27]">WE FINISH.</span>
+            </h1>
+
+            <div className="border-l-2 border-[#707C27] pl-6 py-1 mb-10 max-w-2xl">
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                Turnkey civil construction, structural masonry, high-durability epoxy flooring systems, commercial waterproofing, and complete property remodelling.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4">
+              <Button href="#contact" variant="primary">
+                Request a Quote
+              </Button>
+              <Button href="#projects" variant="secondary">
+                View Our Work
+              </Button>
             </div>
           </div>
+
+          {/* Integrated Monogram Column */}
+          <div className="hidden md:flex md:col-span-4 justify-end items-center relative">
+            <div className="border-l border-[#222222] pl-12 py-12 flex flex-col justify-between h-full">
+              <span className="font-display text-9xl font-black text-[#1A1E29] select-none leading-none tracking-tighter">
+                TG
+              </span>
+              <div className="text-[11px] uppercase tracking-widest text-gray-500 font-semibold space-y-2 mt-8">
+                <div>SPECIFICATION: CIVIL & FINISHING</div>
+                <div>LOCATION: PAKISTAN</div>
+                <div className="text-[#707C27]">TECH GLOBAL CONTRACTORS</div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
+      {/* Hero Photography Split */}
       <section className="border-b border-[#222222] bg-[#1E2330]">
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 border-x border-[#222222]">
           <div className="md:col-span-8 h-[380px] sm:h-[480px] md:h-[560px] relative border-b md:border-b-0 md:border-r border-[#222222] bg-[#111111] overflow-hidden group">
