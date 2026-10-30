@@ -1,59 +1,73 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import Button from "./Button";
 
 export default function Footer() {
+  const [year, setYear] = useState(2026);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
-    <footer className="border-t border-[#222222] bg-[#111111] text-[#F5F4EF]">
-      {/* Statement Closing Callout */}
-      <div className="max-w-7xl mx-auto px-6 py-20 border-b border-[#222222]">
-        <div className="grid md:grid-cols-12 gap-8 items-end justify-between">
+    <footer className="bg-[#111111] text-[#F5F4EF] border-t border-[#222222]">
+      {/* Footer Content */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-12 gap-12 items-end mb-20">
           <div className="md:col-span-8">
-            <span className="text-[#707C27] text-xs font-bold tracking-widest uppercase block mb-3">
-              HAVE A PROJECT IN MIND?
+            <span className="text-xs font-mono text-[#707C27] uppercase block mb-4">
+              [ 04 / INITIATE CONTACT ]
             </span>
-            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold uppercase leading-none text-[#F5F4EF]">
+            <h2 className="font-display text-5xl sm:text-7xl font-extrabold uppercase leading-none">
               LET'S BUILD SOMETHING THAT LASTS.
             </h2>
-            <p className="text-gray-400 text-sm md:text-base mt-4">
-              Civil works. Industrial finishes. Built to perform.
+          </div>
+          <div className="md:col-span-4 flex md:justify-end">
+            <Link
+              href="#contact"
+              className="bg-[#707C27] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 border border-[#707C27] hover:bg-opacity-90 transition-opacity"
+            >
+              GET IN TOUCH ↗
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-[#222222] text-sm">
+          <div>
+            <span className="text-xs font-mono text-gray-500 uppercase block mb-3">
+              NAVIGATION
+            </span>
+            <ul className="space-y-2 text-gray-400">
+              <li><Link href="#services" className="hover:text-[#F5F4EF]">Services</Link></li>
+              <li><Link href="#projects" className="hover:text-[#F5F4EF]">Projects</Link></li>
+              <li><Link href="#about" className="hover:text-[#F5F4EF]">About</Link></li>
+              <li><Link href="#contact" className="hover:text-[#F5F4EF]">Contact</Link></li>
+            </ul>
+          </div>
+          <div>
+            <span className="text-xs font-mono text-gray-500 uppercase block mb-3">
+              LEGAL
+            </span>
+            <ul className="space-y-2 text-gray-400">
+              <li><Link href="/privacy" className="hover:text-[#F5F4EF]">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-[#F5F4EF]">Terms of Service</Link></li>
+            </ul>
+          </div>
+          <div className="col-span-2">
+            <span className="text-xs font-mono text-gray-500 uppercase block mb-3">
+              TECH GLOBAL CONTRACTORS
+            </span>
+            <p className="text-gray-400 text-xs leading-relaxed max-w-sm">
+              Civil construction, protective coatings, and high-durability industrial finishes engineered for commercial facilities.
             </p>
           </div>
-
-          <div className="md:col-span-4 flex md:justify-end">
-            <Button href="#contact" variant="primary">
-              Get in Touch
-            </Button>
-          </div>
         </div>
       </div>
 
-      {/* Brand & Quick Navigation Area */}
-      <div className="max-w-7xl mx-auto px-6 py-12 border-b border-[#222222] flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-        <div>
-          <span className="font-display text-2xl font-extrabold tracking-wider text-[#F5F4EF] leading-none block">
-            TECH GLOBAL
-          </span>
-          <span className="text-xs text-gray-500 uppercase tracking-widest block mt-1">
-            Civil Contractors
-          </span>
-        </div>
-
-        <nav className="flex flex-wrap gap-8 text-xs uppercase tracking-widest font-semibold text-gray-400">
-          <Link href="#about" className="hover:text-[#707C27] transition-colors">About</Link>
-          <Link href="#services" className="hover:text-[#707C27] transition-colors">Services</Link>
-          <Link href="#projects" className="hover:text-[#707C27] transition-colors">Projects</Link>
-          <Link href="#contact" className="hover:text-[#707C27] transition-colors">Contact</Link>
-        </nav>
-      </div>
-
-      {/* Minimal Bottom Legal Bar */}
-      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-        <div>© 2026 Tech Global. All rights reserved.</div>
-        <div className="flex gap-6 uppercase tracking-widest font-semibold">
-          <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy</Link>
-          <span className="text-gray-700">·</span>
-          <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 py-6 border-t border-[#222222] flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 font-mono">
+        <div>© {year} Tech Global. All rights reserved.</div>
+        <div className="mt-2 sm:mt-0">KARACHI, PAKISTAN</div>
       </div>
     </footer>
   );
