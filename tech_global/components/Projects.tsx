@@ -35,16 +35,17 @@ export default function Projects() {
         {/* Asymmetric Project Cards Grid */}
         <div className="grid md:grid-cols-12 gap-8 items-stretch">
           
-          {/* Main Featured Facility Card */}
+          {/* Main Featured Facility Card (P22 Glossy Floor / Corridor) */}
           <Link
             href={`/projects/${primaryProject?.slug || "industrial-facility-expansion"}`}
             className="md:col-span-7 bg-[#1E2330] border border-[#222222] flex flex-col justify-between group overflow-hidden block"
           >
             <div className="h-[320px] sm:h-[400px] relative bg-[#0D0E12] overflow-hidden">
               <Image 
-                src={primaryProject?.coverImage || "/projects/hero-site.jpg"}
+                src="/images/projects/tech-global-corridor-glossy-floor-p22-featured-desktop.webp"
                 alt="Industrial Facility Epoxy & Civil Renovation" 
                 fill
+                sizes="(max-width: 768px) 100vw, 60vw"
                 className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute top-0 right-0 bg-[#707C27] text-white px-4 py-2 text-[10px] font-bold tracking-widest uppercase">
@@ -64,16 +65,17 @@ export default function Projects() {
             </div>
           </Link>
 
-          {/* Secondary Facility Card */}
+          {/* Secondary Facility Card (P02 Corridor Doors / Supporting Work) */}
           <Link
             href={`/projects/${primaryProject?.slug || "industrial-facility-expansion"}`}
             className="md:col-span-5 bg-[#1E2330] border border-[#222222] flex flex-col justify-between group overflow-hidden block"
           >
             <div className="h-[320px] sm:h-[400px] relative bg-[#0D0E12] overflow-hidden">
               <Image 
-                src={primaryProject?.supportingImages?.[0] || "/projects/hero-site.jpg"}
+                src="/images/projects/tech-global-corridor-doors-p02-supporting-desktop.webp"
                 alt="Industrial Protective Paint & Waterproofing" 
                 fill
+                sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute top-0 right-0 bg-[#111111] text-gray-400 border-l border-b border-[#222222] px-4 py-2 text-[10px] font-bold tracking-widest uppercase">

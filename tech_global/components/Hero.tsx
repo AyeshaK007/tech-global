@@ -40,16 +40,33 @@ export default function Hero() {
       {/* Featured Site Photography */}
       <div className="max-w-7xl mx-auto border-t border-[#222222]">
         <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full bg-[#1E2330] overflow-hidden group">
-          <Image 
-            src="/projects/hero-site.jpg" 
-            alt="Tech Global Civil Contracting Site Photo" 
-            fill
-            className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-102 transition-transform duration-700 ease-out"
-            priority
-          />
+          
+          {/* Desktop Hero Image */}
+          <div className="hidden sm:block absolute inset-0">
+            <Image 
+              src="/images/hero/tech-global-cleanroom-corridor-p05-hero-desktop.webp" 
+              alt="Tech Global Cleanroom Corridor - Desktop" 
+              fill
+              className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-102 transition-transform duration-700 ease-out"
+              priority
+              sizes="100vw"
+            />
+          </div>
+
+          {/* Mobile Hero Image */}
+          <div className="block sm:hidden absolute inset-0">
+            <Image 
+              src="/images/hero/tech-global-cleanroom-corridor-p05-hero-mobile.webp" 
+              alt="Tech Global Cleanroom Corridor - Mobile" 
+              fill
+              className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-102 transition-transform duration-700 ease-out"
+              priority
+              sizes="100vw"
+            />
+          </div>
           
           {/* Factual Technical Site Log */}
-          <div className="absolute bottom-0 left-0 right-0 bg-[#111111]/90 backdrop-blur-sm border-t border-[#222222] p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 text-xs font-mono">
+          <div className="absolute bottom-0 left-0 right-0 bg-[#111111]/90 backdrop-blur-sm border-t border-[#222222] p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 text-xs font-mono z-10">
             <div className="flex items-center gap-3">
               <span className="w-2 h-2 bg-[#707C27]"></span>
               <span className="text-[#F5F4EF] font-bold uppercase tracking-widest">FEATURED SITE LOG</span>

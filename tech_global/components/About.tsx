@@ -55,9 +55,10 @@ export default function About() {
           {/* Image Column */}
           <div className="lg:col-span-6 relative aspect-[16/10] bg-[#0D0E12] border border-[#222222] overflow-hidden group">
             <Image
-              src="/projects/hero-site.jpg"
+              src="/images/hero/tech-global-cleanroom-corridor-p05-hero-desktop.webp"
               alt="Tech Global Site Operations"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             <div className="absolute top-4 right-4 bg-[#111111]/90 border border-[#222222] px-3 py-1 text-[10px] font-mono text-[#707C27] uppercase tracking-widest">

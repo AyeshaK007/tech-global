@@ -75,9 +75,10 @@ export default function Services() {
           {/* Photographic Anchor Container */}
           <div className="md:col-span-7 relative min-h-[360px] border-b md:border-b-0 md:border-r border-[#222222] overflow-hidden group">
             <Image 
-              src="/projects/epoxy-floor.jpg" 
+              src="/images/services/tech-global-corridor-glossy-floor-p22-service-landscape.webp" 
               alt="Industrial Epoxy Flooring Installation" 
               fill
+              sizes="(max-width: 768px) 100vw, 60vw"
               className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-102 transition-transform duration-700 ease-out"
             />
             <div className="absolute top-4 left-4 bg-[#111111]/90 border border-[#222222] px-3 py-1.5 text-[10px] font-mono uppercase text-[#707C27] tracking-widest z-10">
