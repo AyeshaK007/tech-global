@@ -27,7 +27,7 @@ export const servicesData: Service[] = [
       "Anti-static & anti-dust industrial sealants",
     ],
     specs: ["Seamless Finish", "Chemical Resistant", "Heavy Load Capable"],
-    heroImage: "/projects/epoxy-floor.jpg",
+    heroImage: "/images/services/tech-global-corridor-glossy-floor-p22-service-landscape.webp",
   },
   {
     slug: "complete-construction",
@@ -44,7 +44,7 @@ export const servicesData: Service[] = [
       "Industrial site civil works",
     ],
     specs: ["Structural Grade", "Engineering Checked", "Turnkey Execution"],
-    heroImage: "/projects/hero-site.jpg",
+    heroImage: "/images/hero/tech-global-cleanroom-corridor-p05-hero-desktop.webp",
   },
   {
     slug: "masonry-plastering",
@@ -61,7 +61,7 @@ export const servicesData: Service[] = [
       "RCC surface preparation & finishing",
     ],
     specs: ["Precision Alignment", "High-Grade Mortar", "Damp Protection"],
-    heroImage: "/projects/hero-site.jpg",
+    heroImage: "/images/services/tech-global-floor-wall-junction-p11-service-landscape.webp",
   },
   {
     slug: "industrial-painting",
@@ -78,7 +78,7 @@ export const servicesData: Service[] = [
       "Anti-fungal & damp-proof wall coatings",
     ],
     specs: ["Weatherproof", "Damp-Proof", "Textured / Smooth"],
-    heroImage: "/projects/hero-site.jpg",
+    heroImage: "/images/services/tech-global-floor-cove-detail-p09-service-landscape.webp",
   },
   {
     slug: "waterproofing",
@@ -95,7 +95,7 @@ export const servicesData: Service[] = [
       "Crack injection & structural leak repairs",
     ],
     specs: ["Subterranean Sealed", "Elastomeric Membrane", "Liquid Applied"],
-    heroImage: "/projects/hero-site.jpg",
+    heroImage: "/images/services/tech-global-paver-courtyard-p31-service-landscape.webp",
   },
   {
     slug: "restoration-remodelling",
@@ -112,7 +112,7 @@ export const servicesData: Service[] = [
       "Facility modernization & layout changes",
     ],
     specs: ["Civil Retrofitting", "Structural Alteration", "Turnkey Upgrade"],
-    heroImage: "/projects/hero-site.jpg",
+    heroImage: "/images/hero/tech-global-cleanroom-corridor-p05-hero-desktop.webp",
   },
   {
     slug: "additional-services",
@@ -129,6 +129,6 @@ export const servicesData: Service[] = [
       "Custom site finishing details",
     ],
     specs: ["Precision Tile Laying", "Heavy-Duty Pavers", "Sanitary Plumbing"],
-    heroImage: "/projects/hero-site.jpg",
+    heroImage: "/images/services/tech-global-paver-courtyard-p31-service-landscape.webp",
   },
 ];
