@@ -1,134 +1,160 @@
+
+import { MEDIA_MANIFEST } from "./media";
+
 export interface Service {
   slug: string;
   number: string;
   title: string;
   category: string;
-  headline: string;
   description: string;
-  scope: string[];
-  specs: string[];
-  heroImage: string;
+  heroImage?: string;
+  features: string[];
+  specs: {
+    label: string;
+    value: string;
+  }[];
 }
 
 export const servicesData: Service[] = [
   {
-    slug: "epoxy-flooring",
-    number: "04",
-    title: "Epoxy Flooring Solutions",
-    category: "INDUSTRIAL FLOORING SYSTEMS",
-    headline: "HIGH-PERFORMANCE INDUSTRIAL SURFACES ENGINEERED FOR HEAVY-TRAFFIC ENDURANCE.",
-    description:
-      "Industrial-grade seamless floor coatings, heavy-traffic anti-slip finishes, chemical-resistant protection, and high-durability anti-dust surfaces built for factories, warehouses, and commercial corridors.",
-    scope: [
-      "Heavy-duty chemical-resistant epoxy coatings",
-      "Anti-slip & textured surface treatments",
-      "High-gloss commercial corridor finishes",
-      "Subfloor repair & surface preparation",
-      "Anti-static & anti-dust industrial sealants",
-    ],
-    specs: ["Seamless Finish", "Chemical Resistant", "Heavy Load Capable"],
-    heroImage: "/images/services/tech-global-corridor-glossy-floor-p22-service-landscape.webp",
-  },
-  {
     slug: "complete-construction",
     number: "01",
-    title: "Complete Construction",
+    title: "Complete Civil Construction",
     category: "CIVIL WORKS",
-    headline: "TURNKEY COMMERCIAL AND INDUSTRIAL GREY-STRUCTURE PROJECTS.",
     description:
-      "Commercial and industrial construction from foundational ground-breaking to grey structure execution with complete structural engineering integrity.",
-    scope: [
-      "Turnkey grey structure development",
-      "Reinforced cement concrete (RCC) frames",
-      "Commercial building foundations",
-      "Industrial site civil works",
+      "Turnkey grey-structure construction for commercial and industrial projects, covering core civil works from foundations to structural execution.",
+    features: [
+      "Foundation and excavation works",
+      "Reinforced concrete construction",
+      "Structural slab and reinforcement works",
+      "Commercial and industrial grey structures",
     ],
-    specs: ["Structural Grade", "Engineering Checked", "Turnkey Execution"],
-    heroImage: "/images/hero/tech-global-cleanroom-corridor-p05-hero-desktop.webp",
+    specs: [
+      { label: "SERVICE TYPE", value: "TURNKEY CIVIL CONSTRUCTION" },
+      { label: "PROJECT SCOPE", value: "GREY STRUCTURE WORKS" },
+      { label: "APPLICATION", value: "COMMERCIAL & INDUSTRIAL" },
+    ],
   },
+
   {
     slug: "masonry-plastering",
     number: "02",
     title: "Masonry & Plastering",
-    category: "STRUCTURAL FINISHES",
-    headline: "PRECISION BRICKWORK, BLOCKWORK, AND HIGH-GRADE SURFACE PLASTERING.",
+    category: "MASONRY & FINISHES",
     description:
-      "Precision structural masonry, blockwork assembly, interior/exterior plastering, and smooth RCC finishing engineered for maximum longevity.",
-    scope: [
-      "Structural brickwork & concrete block masonry",
-      "Interior wall plastering & leveling",
-      "Exterior protective plaster coatings",
-      "RCC surface preparation & finishing",
+      "Interior and exterior plastering, brickwork, block masonry, and RCC finishing for commercial and industrial facilities.",
+    features: [
+      "Brickwork and block masonry",
+      "Interior and exterior plastering",
+      "Wall and surface finishing",
+      "Slope and RCC finishing works",
     ],
-    specs: ["Precision Alignment", "High-Grade Mortar", "Damp Protection"],
-    heroImage: "/images/services/tech-global-floor-wall-junction-p11-service-landscape.webp",
+    specs: [
+      { label: "SERVICE TYPE", value: "MASONRY & PLASTERING" },
+      { label: "APPLICATION", value: "INTERIOR & EXTERIOR" },
+      { label: "WORK SCOPE", value: "WALLS & STRUCTURAL FINISHES" },
+    ],
   },
+
   {
     slug: "industrial-painting",
     number: "03",
-    title: "Industrial Painting",
+    title: "Industrial Painting & Protective Coatings",
     category: "PROTECTIVE COATINGS",
-    headline: "WEATHER-RESISTANT BARRIERS AND DAMP-PROOF INDUSTRIAL COATINGS.",
     description:
-      "Commercial interior and exterior painting, textured architectural finishes, weather-shield protection, and specialized damp-proof coatings.",
-    scope: [
-      "Exterior weather-shield protective painting",
-      "Interior commercial surface finishing",
-      "Textured decorative paint systems",
-      "Anti-fungal & damp-proof wall coatings",
+      "Interior and exterior painting, decorative finishes, and protective coating applications for commercial and industrial spaces.",
+    features: [
+      "Interior and exterior painting",
+      "Decorative and textured finishes",
+      "Weather-shield coatings",
+      "Damp-proof paint applications",
     ],
-    specs: ["Weatherproof", "Damp-Proof", "Textured / Smooth"],
-    heroImage: "/images/services/tech-global-floor-cove-detail-p09-service-landscape.webp",
+    specs: [
+      { label: "SERVICE TYPE", value: "INDUSTRIAL & COMMERCIAL PAINTING" },
+      { label: "FINISH OPTIONS", value: "DECORATIVE & TEXTURED" },
+      { label: "PROTECTION", value: "WEATHER & DAMP RESISTANCE" },
+    ],
   },
+
+  {
+    slug: "epoxy-flooring",
+    number: "04",
+    title: "Epoxy Flooring & Surface Systems",
+    category: "INDUSTRIAL FLOORING",
+    description:
+      "Seamless epoxy flooring solutions for industrial and commercial environments, with surface options for high traffic, chemical resistance, and easier maintenance.",
+    heroImage: MEDIA_MANIFEST.projectFeatured.src,
+    features: [
+      "High-gloss epoxy flooring",
+      "Anti-slip surface options",
+      "Chemical-resistant coating options",
+      "Anti-dust flooring applications",
+    ],
+    specs: [
+      { label: "SERVICE TYPE", value: "EPOXY FLOORING" },
+      { label: "SURFACE OPTIONS", value: "HIGH-GLOSS & ANTI-SLIP" },
+      { label: "APPLICATION", value: "WAREHOUSES & WORKSHOPS" },
+    ],
+  },
+
   {
     slug: "waterproofing",
     number: "05",
     title: "Waterproofing Systems",
-    category: "MEMBRANE & CHEMICAL BARRIERS",
-    headline: "SUBTERRANEAN & ROOF WATERPROOFING PROTECTING STRUCTURAL INTEGRITY.",
+    category: "WATERPROOFING",
     description:
-      "Comprehensive roof, basement, and wet structural area waterproofing using liquid chemical sealants and elastomeric membrane systems.",
-    scope: [
-      "Elastomeric membrane roof waterproofing",
-      "Basement & foundation chemical sealing",
-      "Wet area & bathroom moisture barriers",
-      "Crack injection & structural leak repairs",
+      "Waterproofing solutions for roofs, basements, bathrooms, and other areas exposed to moisture.",
+    features: [
+      "Roof waterproofing",
+      "Basement waterproofing",
+      "Bathroom and wet-area protection",
+      "Chemical coatings and membrane applications",
     ],
-    specs: ["Subterranean Sealed", "Elastomeric Membrane", "Liquid Applied"],
-    heroImage: "/images/services/tech-global-paver-courtyard-p31-service-landscape.webp",
+    specs: [
+      { label: "SERVICE TYPE", value: "WATERPROOFING SYSTEMS" },
+      { label: "APPLICATION", value: "ROOFS & BASEMENTS" },
+      { label: "PROTECTION", value: "MOISTURE BARRIERS" },
+    ],
   },
+
   {
     slug: "restoration-remodelling",
     number: "06",
-    title: "Restoration & Remodelling",
-    category: "COMMERCIAL REHABILITATION",
-    headline: "STRUCTURAL ALTERATIONS AND COMPLETE COMMERCIAL PROPERTY MODERNIZATIONS.",
+    title: "Restoration & Commercial Rehabilitation",
+    category: "REHABILITATION",
     description:
-      "Building rehabilitation, structural modifications, layout refitting, and complete commercial interior and exterior modernizations.",
-    scope: [
-      "Commercial building rehabilitation",
-      "Structural wall modifications & refitting",
-      "Exterior facade upgrades",
-      "Facility modernization & layout changes",
+      "Building rehabilitation, structural modifications, and interior and exterior remodelling for existing commercial facilities.",
+    features: [
+      "Building restoration and rehabilitation",
+      "Structural modifications",
+      "Civil alterations",
+      "Commercial interior and exterior remodelling",
     ],
-    specs: ["Civil Retrofitting", "Structural Alteration", "Turnkey Upgrade"],
-    heroImage: "/images/hero/tech-global-cleanroom-corridor-p05-hero-desktop.webp",
+    specs: [
+      { label: "SERVICE TYPE", value: "RESTORATION & REMODELLING" },
+      { label: "APPLICATION", value: "EXISTING BUILDINGS" },
+      { label: "PROJECT SCOPE", value: "COMMERCIAL FACILITIES" },
+    ],
   },
+
   {
     slug: "additional-services",
     number: "07",
-    title: "Additional Finishing Works",
-    category: "SITE FINISHING",
-    headline: "INTEGRATED TILING, MARBLE FITTING, PAVERS, AND COMMERCIAL PLUMBING.",
+    title: "Additional Finishing Works & Pavers",
+    category: "EXTERIOR FINISHING",
     description:
-      "Interlocking pavers, ceramic tiling, marble fitting, complete floor laying, and integrated commercial sanitary plumbing solutions.",
-    scope: [
+      "Additional finishing and civil works covering paver installation, tile and marble flooring, and plumbing solutions.",
+    heroImage: MEDIA_MANIFEST.servicePaverCourtyard.src,
+    features: [
       "Interlocking paver installation",
-      "Ceramic tile & marble floor laying",
-      "Commercial sanitary & drainage plumbing",
-      "Custom site finishing details",
+      "Ceramic tile installation",
+      "Marble flooring",
+      "Plumbing works",
     ],
-    specs: ["Precision Tile Laying", "Heavy-Duty Pavers", "Sanitary Plumbing"],
-    heroImage: "/images/services/tech-global-paver-courtyard-p31-service-landscape.webp",
+    specs: [
+      { label: "SERVICE TYPE", value: "ADDITIONAL FINISHING WORKS" },
+      { label: "FLOORING", value: "PAVERS, TILE & MARBLE" },
+      { label: "ADDITIONAL WORK", value: "PLUMBING" },
+    ],
   },
 ];

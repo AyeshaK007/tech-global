@@ -1,3 +1,6 @@
+
+import { MEDIA_MANIFEST } from "./media";
+
 export interface Project {
   slug: string;
   title: string;
@@ -14,22 +17,40 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     slug: "industrial-facility-expansion",
-    title: "Commercial Industrial Facility Expansion",
-    category: "CIVIL & HEAVY EPOXY COATING",
-    location: "KARACHI INDUSTRIAL AREA",
-    scope: "Epoxy Flooring, Structural Plastering & Protective Wall Coatings",
-    headline: "HIGH-END INDUSTRIAL FACILITY FEATURING SEAMLESS CHEMICAL-RESISTANT EPOXY SURFACES.",
+    title: "Industrial Facility Flooring & Finishing",
+    category: "INDUSTRIAL FLOORING & CIVIL WORKS",
+    location: "",
+    scope: "Industrial Flooring & Facility Finishing",
+    headline: "INDUSTRIAL FLOORING AND FACILITY FINISHING.",
     description:
-      "A complete structural and protective surface application for an industrial production and corridor facility. Works included subfloor preparation, heavy-duty anti-slip epoxy flooring execution, structural wall leveling, and protective weather-shield exterior coatings.",
-    coverImage: "/images/projects/tech-global-corridor-glossy-floor-p22-featured-desktop.webp",
+      "Completed industrial facility work featuring epoxy flooring and associated interior finishing. The project gallery presents selected views of the completed facility.",
+    coverImage: MEDIA_MANIFEST.projectFeatured.src,
     supportingImages: [
-      "/images/projects/tech-global-corridor-doors-p02-supporting-desktop.webp",
-      "/images/services/tech-global-floor-wall-junction-p11-service-landscape.webp"
+      MEDIA_MANIFEST.projectCorridorDoors.src,
+      MEDIA_MANIFEST.detailFloorWallJunction.src,
+      MEDIA_MANIFEST.detailFloorCove.src,
     ],
     specs: [
-      { label: "AREA COVERAGE", value: "45,000 SQ. FT." },
-      { label: "SURFACE SYSTEM", value: "HEAVY-DUTY EPOXY SLURRY" },
-      { label: "EXECUTION PERIOD", value: "VERIFIED FIELD LOG" },
+      { label: "PROJECT TYPE", value: "INDUSTRIAL FACILITY" },
+      { label: "FEATURED WORK", value: "EPOXY FLOORING" },
+      { label: "STATUS", value: "COMPLETED" },
+    ],
+  },
+  {
+    slug: "interlocking-paver-installation",
+    title: "Interlocking Paver Installation",
+    category: "EXTERIOR FINISHING",
+    location: "",
+    scope: "Exterior Paver Installation",
+    headline: "EXTERIOR PAVING AND SURFACE FINISHING.",
+    description:
+      "Completed exterior finishing work featuring the installation of interlocking concrete pavers. The project gallery highlights the finished paved courtyard.",
+    coverImage: MEDIA_MANIFEST.servicePaverCourtyard.src,
+    supportingImages: [],
+    specs: [
+      { label: "PROJECT TYPE", value: "EXTERIOR FINISHING" },
+      { label: "FEATURED WORK", value: "INTERLOCKING PAVERS" },
+      { label: "STATUS", value: "COMPLETED" },
     ],
   },
 ];

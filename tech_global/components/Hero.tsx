@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MEDIA_MANIFEST } from "@/data/media";
 
 export default function Hero() {
+  const heroMedia = MEDIA_MANIFEST.heroPrimary;
+
   return (
     <section className="bg-[#111111] text-[#F5F4EF] border-b border-[#222222]">
       
@@ -20,17 +23,17 @@ export default function Hero() {
         <div className="grid md:grid-cols-12 gap-8 items-end pt-4">
           <div className="md:col-span-8">
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              Civil construction, protective coatings, and high-durability industrial finishes engineered for commercial and industrial facilities.
+              Delivering civil construction, protective coatings, and durable finishing solutions for commercial and industrial spaces.
             </p>
           </div>
           
           <div className="md:col-span-4 flex md:justify-end">
             <Link 
               href="#projects" 
-              className="group inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-[#F5F4EF] border-b border-[#707C27] pb-2 hover:border-[#F5F4EF] transition-all"
+              className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-[#F5F4EF] border-b border-[#707C27] pb-2"
             >
               <span>EXPLORE OUR PROJECTS</span>
-              <span className="text-sm text-[#707C27] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+              <span className="text-sm text-[#707C27]">↗</span>
             </Link>
           </div>
         </div>
@@ -38,42 +41,45 @@ export default function Hero() {
       </div>
 
       {/* Featured Site Photography */}
-      <div className="max-w-7xl mx-auto border-t border-[#222222]">
-        <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full bg-[#1E2330] overflow-hidden group">
+      <div className="max-w-7xl mx-auto border-t border-x border-[#222222]">
+        <div className="relative aspect-[4/3] sm:aspect-[21/9] w-full bg-[#1E2330] overflow-hidden">
           
-          {/* Desktop Hero Image */}
+          {/* Desktop Hero Image (Natural Color) */}
           <div className="hidden sm:block absolute inset-0">
             <Image 
-              src="/images/hero/tech-global-cleanroom-corridor-p05-hero-desktop.webp" 
-              alt="Tech Global Cleanroom Corridor - Desktop" 
+              src={heroMedia.src} 
+              alt={heroMedia.alt} 
               fill
-              className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-102 transition-transform duration-700 ease-out"
+              className="object-cover object-center"
               priority
               sizes="100vw"
             />
           </div>
 
-          {/* Mobile Hero Image */}
+          {/* Mobile Hero Image (Natural Color, Centered Framing) */}
           <div className="block sm:hidden absolute inset-0">
             <Image 
-              src="/images/hero/tech-global-cleanroom-corridor-p05-hero-mobile.webp" 
-              alt="Tech Global Cleanroom Corridor - Mobile" 
+              src={heroMedia.mobileSrc || heroMedia.src} 
+              alt={heroMedia.alt} 
               fill
-              className="object-cover grayscale contrast-125 brightness-90 group-hover:scale-102 transition-transform duration-700 ease-out"
+              className="object-cover object-center"
               priority
               sizes="100vw"
             />
           </div>
-          
-          {/* Factual Technical Site Log */}
-          <div className="absolute bottom-0 left-0 right-0 bg-[#111111]/90 backdrop-blur-sm border-t border-[#222222] p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 text-xs font-mono z-10">
-            <div className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-[#707C27]"></span>
-              <span className="text-[#F5F4EF] font-bold uppercase tracking-widest">FEATURED SITE LOG</span>
-            </div>
-            <div className="text-gray-400">
-              INDUSTRIAL EPOXY & MASONRY STRUCTURAL ASSEMBLY — 2026
-            </div>
+
+        </div>
+
+        {/* Architectural Technical Site Log Bar (Outside Image Area) */}
+        <div className="bg-[#111111] border-t border-[#222222] px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between sm:items-center gap-2 text-xs font-mono">
+          <div className="flex items-center gap-3">
+            <span className="w-2 h-2 bg-[#707C27] shrink-0" />
+            <span className="text-[#F5F4EF] font-bold uppercase tracking-widest">
+              FEATURED SITE LOG
+            </span>
+          </div>
+          <div className="text-gray-400">
+            {heroMedia.caption}
           </div>
         </div>
       </div>
